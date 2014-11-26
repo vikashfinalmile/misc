@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>bind demo</title>
+<style>
+p, div {
+background: yellow;
+font-weight: bold;
+cursor: pointer;
+padding: 5px;
+}
+p.over {
+background: #ccc;
+}
+span {
+color: red;
+}
+</style>
+<script src="lib/jquery.min.js"></script>
+<script src="lib/logger.js"></script>
+</head>
+<body>
+<div id='check'>Click or double click here.
+<div id='abcd'>inside it ......................</div>
+still there
+</div>
+<p id='noa'>Click or double click here.</p>
+<span></span>
+  
+<script>
+  var elements = ["#abcd", "#noa", "#check"];
+  var userid = "userid";
+  var loggerURL = "http://localhost/game/test.php";
+  enableLogger(elements, loggerURL, userid);
+</script>
+</body>
+</html>
